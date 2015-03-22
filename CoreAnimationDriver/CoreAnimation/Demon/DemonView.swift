@@ -421,16 +421,16 @@ class DemonView : UIView {
 		let easeOutTiming = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
 		if let complete = completion {
 			let representativeAnimation = CABasicAnimation(keyPath: "not.a.real.key")
-			representativeAnimation.duration = 1.000
+			representativeAnimation.duration = 0.650
 			representativeAnimation.delegate = self
 			self.layer.addAnimation(representativeAnimation, forKey: "Bite")
 			self.animationCompletions[layer.animationForKey("Bite")] = complete
 		}
 
 		let headRotationAnimation = CAKeyframeAnimation(keyPath: "transform.rotation.z")
-		headRotationAnimation.duration = 1.000
+		headRotationAnimation.duration = 0.650
 		headRotationAnimation.values = [0.000 as Float, 0.332 as Float, 0.506 as Float, 0.332 as Float]
-		headRotationAnimation.keyTimes = [0.000 as Float, 0.500 as Float, 0.750 as Float, 1.000 as Float]
+		headRotationAnimation.keyTimes = [0.000 as Float, 0.385 as Float, 0.769 as Float, 1.000 as Float]
 		headRotationAnimation.timingFunctions = [linearTiming, linearTiming, linearTiming]
 		headRotationAnimation.beginTime = beginTime
 		headRotationAnimation.fillMode = fillMode
@@ -438,9 +438,9 @@ class DemonView : UIView {
 		self.viewsByName["Head"]?.layer.addAnimation(headRotationAnimation, forKey:"Bite_Rotation")
 
 		let leftLegRotationAnimation = CAKeyframeAnimation(keyPath: "transform.rotation.z")
-		leftLegRotationAnimation.duration = 1.000
+		leftLegRotationAnimation.duration = 0.650
 		leftLegRotationAnimation.values = [0.000 as Float, 0.000 as Float, 0.087 as Float, 0.000 as Float]
-		leftLegRotationAnimation.keyTimes = [0.000 as Float, 0.500 as Float, 0.750 as Float, 1.000 as Float]
+		leftLegRotationAnimation.keyTimes = [0.000 as Float, 0.385 as Float, 0.769 as Float, 1.000 as Float]
 		leftLegRotationAnimation.timingFunctions = [linearTiming, linearTiming, linearTiming]
 		leftLegRotationAnimation.beginTime = beginTime
 		leftLegRotationAnimation.fillMode = fillMode
@@ -448,9 +448,9 @@ class DemonView : UIView {
 		self.viewsByName["Left Leg"]?.layer.addAnimation(leftLegRotationAnimation, forKey:"Bite_Rotation")
 
 		let torsoScaleXAnimation = CAKeyframeAnimation(keyPath: "transform.scale.x")
-		torsoScaleXAnimation.duration = 1.000
+		torsoScaleXAnimation.duration = 0.650
 		torsoScaleXAnimation.values = [1.000 as Float, 1.000 as Float, 1.060 as Float, 1.010 as Float]
-		torsoScaleXAnimation.keyTimes = [0.000 as Float, 0.500 as Float, 0.750 as Float, 1.000 as Float]
+		torsoScaleXAnimation.keyTimes = [0.000 as Float, 0.385 as Float, 0.769 as Float, 1.000 as Float]
 		torsoScaleXAnimation.timingFunctions = [linearTiming, linearTiming, linearTiming]
 		torsoScaleXAnimation.beginTime = beginTime
 		torsoScaleXAnimation.fillMode = fillMode
@@ -458,9 +458,9 @@ class DemonView : UIView {
 		self.viewsByName["torso"]?.layer.addAnimation(torsoScaleXAnimation, forKey:"Bite_ScaleX")
 
 		let torsoScaleYAnimation = CAKeyframeAnimation(keyPath: "transform.scale.y")
-		torsoScaleYAnimation.duration = 1.000
+		torsoScaleYAnimation.duration = 0.650
 		torsoScaleYAnimation.values = [1.000 as Float, 1.000 as Float, 1.060 as Float, 1.010 as Float]
-		torsoScaleYAnimation.keyTimes = [0.000 as Float, 0.500 as Float, 0.750 as Float, 1.000 as Float]
+		torsoScaleYAnimation.keyTimes = [0.000 as Float, 0.385 as Float, 0.769 as Float, 1.000 as Float]
 		torsoScaleYAnimation.timingFunctions = [linearTiming, linearTiming, linearTiming]
 		torsoScaleYAnimation.beginTime = beginTime
 		torsoScaleYAnimation.fillMode = fillMode
@@ -468,9 +468,9 @@ class DemonView : UIView {
 		self.viewsByName["torso"]?.layer.addAnimation(torsoScaleYAnimation, forKey:"Bite_ScaleY")
 
 		let lLowerLegRotationAnimation = CAKeyframeAnimation(keyPath: "transform.rotation.z")
-		lLowerLegRotationAnimation.duration = 1.000
+		lLowerLegRotationAnimation.duration = 0.650
 		lLowerLegRotationAnimation.values = [0.000 as Float, 0.000 as Float, -0.087 as Float, 0.000 as Float]
-		lLowerLegRotationAnimation.keyTimes = [0.000 as Float, 0.500 as Float, 0.750 as Float, 1.000 as Float]
+		lLowerLegRotationAnimation.keyTimes = [0.000 as Float, 0.385 as Float, 0.769 as Float, 1.000 as Float]
 		lLowerLegRotationAnimation.timingFunctions = [linearTiming, linearTiming, linearTiming]
 		lLowerLegRotationAnimation.beginTime = beginTime
 		lLowerLegRotationAnimation.fillMode = fillMode
@@ -478,9 +478,9 @@ class DemonView : UIView {
 		self.viewsByName["l_lower_leg"]?.layer.addAnimation(lLowerLegRotationAnimation, forKey:"Bite_Rotation")
 
 		let rLowerArmRotationAnimation = CAKeyframeAnimation(keyPath: "transform.rotation.z")
-		rLowerArmRotationAnimation.duration = 1.000
+		rLowerArmRotationAnimation.duration = 0.650
 		rLowerArmRotationAnimation.values = [0.000 as Float, 0.000 as Float, 0.140 as Float, -0.000 as Float]
-		rLowerArmRotationAnimation.keyTimes = [0.000 as Float, 0.500 as Float, 0.750 as Float, 1.000 as Float]
+		rLowerArmRotationAnimation.keyTimes = [0.000 as Float, 0.385 as Float, 0.769 as Float, 1.000 as Float]
 		rLowerArmRotationAnimation.timingFunctions = [linearTiming, linearTiming, linearTiming]
 		rLowerArmRotationAnimation.beginTime = beginTime
 		rLowerArmRotationAnimation.fillMode = fillMode
@@ -488,9 +488,9 @@ class DemonView : UIView {
 		self.viewsByName["r_lower_arm"]?.layer.addAnimation(rLowerArmRotationAnimation, forKey:"Bite_Rotation")
 
 		let lLowerArmRotationAnimation = CAKeyframeAnimation(keyPath: "transform.rotation.z")
-		lLowerArmRotationAnimation.duration = 1.000
+		lLowerArmRotationAnimation.duration = 0.650
 		lLowerArmRotationAnimation.values = [0.000 as Float, 0.000 as Float, 0.122 as Float, -0.000 as Float]
-		lLowerArmRotationAnimation.keyTimes = [0.000 as Float, 0.500 as Float, 0.750 as Float, 1.000 as Float]
+		lLowerArmRotationAnimation.keyTimes = [0.000 as Float, 0.385 as Float, 0.769 as Float, 1.000 as Float]
 		lLowerArmRotationAnimation.timingFunctions = [linearTiming, linearTiming, linearTiming]
 		lLowerArmRotationAnimation.beginTime = beginTime
 		lLowerArmRotationAnimation.fillMode = fillMode
@@ -498,9 +498,9 @@ class DemonView : UIView {
 		self.viewsByName["l_lower_arm"]?.layer.addAnimation(lLowerArmRotationAnimation, forKey:"Bite_Rotation")
 
 		let neckAndHeadRotationAnimation = CAKeyframeAnimation(keyPath: "transform.rotation.z")
-		neckAndHeadRotationAnimation.duration = 1.000
+		neckAndHeadRotationAnimation.duration = 0.650
 		neckAndHeadRotationAnimation.values = [0.000 as Float, 0.105 as Float, -0.035 as Float, 0.105 as Float]
-		neckAndHeadRotationAnimation.keyTimes = [0.000 as Float, 0.500 as Float, 0.750 as Float, 1.000 as Float]
+		neckAndHeadRotationAnimation.keyTimes = [0.000 as Float, 0.385 as Float, 0.769 as Float, 1.000 as Float]
 		neckAndHeadRotationAnimation.timingFunctions = [linearTiming, linearTiming, linearTiming]
 		neckAndHeadRotationAnimation.beginTime = beginTime
 		neckAndHeadRotationAnimation.fillMode = fillMode
@@ -508,9 +508,9 @@ class DemonView : UIView {
 		self.viewsByName["Neck and Head"]?.layer.addAnimation(neckAndHeadRotationAnimation, forKey:"Bite_Rotation")
 
 		let demonTranslationXAnimation = CAKeyframeAnimation(keyPath: "transform.translation.x")
-		demonTranslationXAnimation.duration = 1.000
+		demonTranslationXAnimation.duration = 0.650
 		demonTranslationXAnimation.values = [0.000 as Float, 0.000 as Float, -7.000 as Float, 0.000 as Float]
-		demonTranslationXAnimation.keyTimes = [0.000 as Float, 0.500 as Float, 0.750 as Float, 1.000 as Float]
+		demonTranslationXAnimation.keyTimes = [0.000 as Float, 0.385 as Float, 0.769 as Float, 1.000 as Float]
 		demonTranslationXAnimation.timingFunctions = [linearTiming, linearTiming, linearTiming]
 		demonTranslationXAnimation.beginTime = beginTime
 		demonTranslationXAnimation.fillMode = fillMode
@@ -518,9 +518,9 @@ class DemonView : UIView {
 		self.viewsByName["Demon"]?.layer.addAnimation(demonTranslationXAnimation, forKey:"Bite_TranslationX")
 
 		let jawRotationAnimation = CAKeyframeAnimation(keyPath: "transform.rotation.z")
-		jawRotationAnimation.duration = 1.000
+		jawRotationAnimation.duration = 0.650
 		jawRotationAnimation.values = [0.000 as Float, -0.297 as Float, 0.157 as Float, -0.297 as Float]
-		jawRotationAnimation.keyTimes = [0.000 as Float, 0.500 as Float, 0.750 as Float, 1.000 as Float]
+		jawRotationAnimation.keyTimes = [0.000 as Float, 0.385 as Float, 0.769 as Float, 1.000 as Float]
 		jawRotationAnimation.timingFunctions = [linearTiming, easeInTiming, easeOutTiming]
 		jawRotationAnimation.beginTime = beginTime
 		jawRotationAnimation.fillMode = fillMode
@@ -528,9 +528,9 @@ class DemonView : UIView {
 		self.viewsByName["jaw"]?.layer.addAnimation(jawRotationAnimation, forKey:"Bite_Rotation")
 
 		let jawTranslationXAnimation = CAKeyframeAnimation(keyPath: "transform.translation.x")
-		jawTranslationXAnimation.duration = 1.000
+		jawTranslationXAnimation.duration = 0.650
 		jawTranslationXAnimation.values = [0.000 as Float, 5.997 as Float, -9.757 as Float, 0.000 as Float]
-		jawTranslationXAnimation.keyTimes = [0.000 as Float, 0.500 as Float, 0.750 as Float, 1.000 as Float]
+		jawTranslationXAnimation.keyTimes = [0.000 as Float, 0.385 as Float, 0.769 as Float, 1.000 as Float]
 		jawTranslationXAnimation.timingFunctions = [linearTiming, linearTiming, linearTiming]
 		jawTranslationXAnimation.beginTime = beginTime
 		jawTranslationXAnimation.fillMode = fillMode
@@ -538,9 +538,9 @@ class DemonView : UIView {
 		self.viewsByName["jaw"]?.layer.addAnimation(jawTranslationXAnimation, forKey:"Bite_TranslationX")
 
 		let jawTranslationYAnimation = CAKeyframeAnimation(keyPath: "transform.translation.y")
-		jawTranslationYAnimation.duration = 1.000
+		jawTranslationYAnimation.duration = 0.650
 		jawTranslationYAnimation.values = [0.000 as Float, 3.747 as Float, -9.550 as Float, 0.000 as Float]
-		jawTranslationYAnimation.keyTimes = [0.000 as Float, 0.500 as Float, 0.750 as Float, 1.000 as Float]
+		jawTranslationYAnimation.keyTimes = [0.000 as Float, 0.385 as Float, 0.769 as Float, 1.000 as Float]
 		jawTranslationYAnimation.timingFunctions = [linearTiming, linearTiming, linearTiming]
 		jawTranslationYAnimation.beginTime = beginTime
 		jawTranslationYAnimation.fillMode = fillMode

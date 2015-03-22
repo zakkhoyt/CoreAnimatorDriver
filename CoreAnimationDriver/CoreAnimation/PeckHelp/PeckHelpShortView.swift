@@ -71,6 +71,8 @@ class PeckHelpShortView : UIView {
 		branch01.bounds = CGRect(x:0, y:0, width:438.0, height:215.0)
 		branch01.layer.anchorPoint = CGPoint(x:0.990, y:0.382)
 		var imgBranch01: UIImage!
+
+        
 		if let imagePath = bundle.pathForResource("branch01.png", ofType:nil) {
 			imgBranch01 = UIImage(contentsOfFile:imagePath)
 		}
@@ -163,9 +165,19 @@ class PeckHelpShortView : UIView {
 			self.animationCompletions[layer.animationForKey("BirdsLand")] = complete
 		}
 
+		let bird01OpacityAnimation = CAKeyframeAnimation(keyPath: "opacity")
+		bird01OpacityAnimation.duration = 0.500
+		bird01OpacityAnimation.values = [0.000 as Float, 1.000 as Float, 1.000 as Float]
+		bird01OpacityAnimation.keyTimes = [0.000 as Float, 0.500 as Float, 1.000 as Float]
+		bird01OpacityAnimation.timingFunctions = [linearTiming, linearTiming]
+		bird01OpacityAnimation.beginTime = beginTime
+		bird01OpacityAnimation.fillMode = fillMode
+		bird01OpacityAnimation.removedOnCompletion = removedOnCompletion
+		self.viewsByName["bird_01"]?.layer.addAnimation(bird01OpacityAnimation, forKey:"BirdsLand_Opacity")
+
 		let bird01TranslationXAnimation = CAKeyframeAnimation(keyPath: "transform.translation.x")
 		bird01TranslationXAnimation.duration = 0.500
-		bird01TranslationXAnimation.values = [0.000 as Float, 1209.969 as Float, 1214.969 as Float]
+		bird01TranslationXAnimation.values = [1344.355 as Float, 1209.969 as Float, 1214.969 as Float]
 		bird01TranslationXAnimation.keyTimes = [0.000 as Float, 0.500 as Float, 1.000 as Float]
 		bird01TranslationXAnimation.timingFunctions = [easeOutTiming, easeInOutTiming]
 		bird01TranslationXAnimation.beginTime = beginTime
@@ -175,7 +187,7 @@ class PeckHelpShortView : UIView {
 
 		let bird01TranslationYAnimation = CAKeyframeAnimation(keyPath: "transform.translation.y")
 		bird01TranslationYAnimation.duration = 0.500
-		bird01TranslationYAnimation.values = [0.000 as Float, 865.719 as Float, 930.719 as Float]
+		bird01TranslationYAnimation.values = [500.215 as Float, 865.719 as Float, 930.719 as Float]
 		bird01TranslationYAnimation.keyTimes = [0.000 as Float, 0.500 as Float, 1.000 as Float]
 		bird01TranslationYAnimation.timingFunctions = [easeOutTiming, easeInOutTiming]
 		bird01TranslationYAnimation.beginTime = beginTime
@@ -183,9 +195,19 @@ class PeckHelpShortView : UIView {
 		bird01TranslationYAnimation.removedOnCompletion = removedOnCompletion
 		self.viewsByName["bird_01"]?.layer.addAnimation(bird01TranslationYAnimation, forKey:"BirdsLand_TranslationY")
 
+		let bird00OpacityAnimation = CAKeyframeAnimation(keyPath: "opacity")
+		bird00OpacityAnimation.duration = 0.500
+		bird00OpacityAnimation.values = [0.000 as Float, 1.000 as Float, 1.000 as Float]
+		bird00OpacityAnimation.keyTimes = [0.000 as Float, 0.500 as Float, 1.000 as Float]
+		bird00OpacityAnimation.timingFunctions = [linearTiming, linearTiming]
+		bird00OpacityAnimation.beginTime = beginTime
+		bird00OpacityAnimation.fillMode = fillMode
+		bird00OpacityAnimation.removedOnCompletion = removedOnCompletion
+		self.viewsByName["bird_00"]?.layer.addAnimation(bird00OpacityAnimation, forKey:"BirdsLand_Opacity")
+
 		let bird00TranslationXAnimation = CAKeyframeAnimation(keyPath: "transform.translation.x")
 		bird00TranslationXAnimation.duration = 0.500
-		bird00TranslationXAnimation.values = [0.000 as Float, 1133.477 as Float, 1142.477 as Float]
+		bird00TranslationXAnimation.values = [906.133 as Float, 1133.477 as Float, 1142.477 as Float]
 		bird00TranslationXAnimation.keyTimes = [0.000 as Float, 0.500 as Float, 1.000 as Float]
 		bird00TranslationXAnimation.timingFunctions = [easeOutTiming, easeInOutTiming]
 		bird00TranslationXAnimation.beginTime = beginTime
@@ -195,7 +217,7 @@ class PeckHelpShortView : UIView {
 
 		let bird00TranslationYAnimation = CAKeyframeAnimation(keyPath: "transform.translation.y")
 		bird00TranslationYAnimation.duration = 0.500
-		bird00TranslationYAnimation.values = [0.000 as Float, 378.398 as Float, 463.398 as Float]
+		bird00TranslationYAnimation.values = [84.277 as Float, 378.398 as Float, 463.398 as Float]
 		bird00TranslationYAnimation.keyTimes = [0.000 as Float, 0.500 as Float, 1.000 as Float]
 		bird00TranslationYAnimation.timingFunctions = [easeOutTiming, easeInOutTiming]
 		bird00TranslationYAnimation.beginTime = beginTime
@@ -203,9 +225,19 @@ class PeckHelpShortView : UIView {
 		bird00TranslationYAnimation.removedOnCompletion = removedOnCompletion
 		self.viewsByName["bird_00"]?.layer.addAnimation(bird00TranslationYAnimation, forKey:"BirdsLand_TranslationY")
 
+		let bird08OpacityAnimation = CAKeyframeAnimation(keyPath: "opacity")
+		bird08OpacityAnimation.duration = 0.500
+		bird08OpacityAnimation.values = [0.000 as Float, 1.000 as Float, 1.000 as Float]
+		bird08OpacityAnimation.keyTimes = [0.000 as Float, 0.500 as Float, 1.000 as Float]
+		bird08OpacityAnimation.timingFunctions = [linearTiming, linearTiming]
+		bird08OpacityAnimation.beginTime = beginTime
+		bird08OpacityAnimation.fillMode = fillMode
+		bird08OpacityAnimation.removedOnCompletion = removedOnCompletion
+		self.viewsByName["bird_08"]?.layer.addAnimation(bird08OpacityAnimation, forKey:"BirdsLand_Opacity")
+
 		let bird08TranslationXAnimation = CAKeyframeAnimation(keyPath: "transform.translation.x")
 		bird08TranslationXAnimation.duration = 0.500
-		bird08TranslationXAnimation.values = [0.000 as Float, -1144.757 as Float, -1145.757 as Float]
+		bird08TranslationXAnimation.values = [-930.996 as Float, -1144.757 as Float, -1145.757 as Float]
 		bird08TranslationXAnimation.keyTimes = [0.000 as Float, 0.500 as Float, 1.000 as Float]
 		bird08TranslationXAnimation.timingFunctions = [easeOutTiming, easeInOutTiming]
 		bird08TranslationXAnimation.beginTime = beginTime
@@ -215,7 +247,7 @@ class PeckHelpShortView : UIView {
 
 		let bird08TranslationYAnimation = CAKeyframeAnimation(keyPath: "transform.translation.y")
 		bird08TranslationYAnimation.duration = 0.500
-		bird08TranslationYAnimation.values = [0.000 as Float, 651.937 as Float, 671.937 as Float]
+		bird08TranslationYAnimation.values = [456.777 as Float, 651.937 as Float, 671.937 as Float]
 		bird08TranslationYAnimation.keyTimes = [0.000 as Float, 0.500 as Float, 1.000 as Float]
 		bird08TranslationYAnimation.timingFunctions = [easeOutTiming, easeInOutTiming]
 		bird08TranslationYAnimation.beginTime = beginTime
@@ -223,9 +255,19 @@ class PeckHelpShortView : UIView {
 		bird08TranslationYAnimation.removedOnCompletion = removedOnCompletion
 		self.viewsByName["bird_08"]?.layer.addAnimation(bird08TranslationYAnimation, forKey:"BirdsLand_TranslationY")
 
+		let bird06OpacityAnimation = CAKeyframeAnimation(keyPath: "opacity")
+		bird06OpacityAnimation.duration = 0.500
+		bird06OpacityAnimation.values = [0.000 as Float, 1.000 as Float, 1.000 as Float]
+		bird06OpacityAnimation.keyTimes = [0.000 as Float, 0.500 as Float, 1.000 as Float]
+		bird06OpacityAnimation.timingFunctions = [linearTiming, linearTiming]
+		bird06OpacityAnimation.beginTime = beginTime
+		bird06OpacityAnimation.fillMode = fillMode
+		bird06OpacityAnimation.removedOnCompletion = removedOnCompletion
+		self.viewsByName["bird_06"]?.layer.addAnimation(bird06OpacityAnimation, forKey:"BirdsLand_Opacity")
+
 		let bird06TranslationXAnimation = CAKeyframeAnimation(keyPath: "transform.translation.x")
 		bird06TranslationXAnimation.duration = 0.500
-		bird06TranslationXAnimation.values = [0.000 as Float, 1058.148 as Float, 1068.148 as Float]
+		bird06TranslationXAnimation.values = [1166.094 as Float, 1058.148 as Float, 1068.148 as Float]
 		bird06TranslationXAnimation.keyTimes = [0.000 as Float, 0.500 as Float, 1.000 as Float]
 		bird06TranslationXAnimation.timingFunctions = [easeOutTiming, easeInOutTiming]
 		bird06TranslationXAnimation.beginTime = beginTime
@@ -235,7 +277,7 @@ class PeckHelpShortView : UIView {
 
 		let bird06TranslationYAnimation = CAKeyframeAnimation(keyPath: "transform.translation.y")
 		bird06TranslationYAnimation.duration = 0.500
-		bird06TranslationYAnimation.values = [0.000 as Float, 236.188 as Float, 338.188 as Float]
+		bird06TranslationYAnimation.values = [-83.711 as Float, 236.188 as Float, 338.188 as Float]
 		bird06TranslationYAnimation.keyTimes = [0.000 as Float, 0.500 as Float, 1.000 as Float]
 		bird06TranslationYAnimation.timingFunctions = [easeOutTiming, easeInOutTiming]
 		bird06TranslationYAnimation.beginTime = beginTime
@@ -252,19 +294,223 @@ class PeckHelpShortView : UIView {
 		branch01RotationAnimation.fillMode = fillMode
 		branch01RotationAnimation.removedOnCompletion = removedOnCompletion
 		self.viewsByName["branch01"]?.layer.addAnimation(branch01RotationAnimation, forKey:"BirdsLand_Rotation")
+
+		let branch01OpacityAnimation = CAKeyframeAnimation(keyPath: "opacity")
+		branch01OpacityAnimation.duration = 0.500
+		branch01OpacityAnimation.values = [1.000 as Float, 1.000 as Float, 1.000 as Float]
+		branch01OpacityAnimation.keyTimes = [0.000 as Float, 0.500 as Float, 1.000 as Float]
+		branch01OpacityAnimation.timingFunctions = [linearTiming, linearTiming]
+		branch01OpacityAnimation.beginTime = beginTime
+		branch01OpacityAnimation.fillMode = fillMode
+		branch01OpacityAnimation.removedOnCompletion = removedOnCompletion
+		self.viewsByName["branch01"]?.layer.addAnimation(branch01OpacityAnimation, forKey:"BirdsLand_Opacity")
 	}
 
 	func removeBirdsLandAnimation() {
 		self.layer.removeAnimationForKey("BirdsLand")
+		self.viewsByName["bird_01"]?.layer.removeAnimationForKey("BirdsLand_Opacity")
 		self.viewsByName["bird_01"]?.layer.removeAnimationForKey("BirdsLand_TranslationX")
 		self.viewsByName["bird_01"]?.layer.removeAnimationForKey("BirdsLand_TranslationY")
+		self.viewsByName["bird_00"]?.layer.removeAnimationForKey("BirdsLand_Opacity")
 		self.viewsByName["bird_00"]?.layer.removeAnimationForKey("BirdsLand_TranslationX")
 		self.viewsByName["bird_00"]?.layer.removeAnimationForKey("BirdsLand_TranslationY")
+		self.viewsByName["bird_08"]?.layer.removeAnimationForKey("BirdsLand_Opacity")
 		self.viewsByName["bird_08"]?.layer.removeAnimationForKey("BirdsLand_TranslationX")
 		self.viewsByName["bird_08"]?.layer.removeAnimationForKey("BirdsLand_TranslationY")
+		self.viewsByName["bird_06"]?.layer.removeAnimationForKey("BirdsLand_Opacity")
 		self.viewsByName["bird_06"]?.layer.removeAnimationForKey("BirdsLand_TranslationX")
 		self.viewsByName["bird_06"]?.layer.removeAnimationForKey("BirdsLand_TranslationY")
 		self.viewsByName["branch01"]?.layer.removeAnimationForKey("BirdsLand_Rotation")
+		self.viewsByName["branch01"]?.layer.removeAnimationForKey("BirdsLand_Opacity")
+	}
+
+	// - MARK: BirdsDepart
+
+	func addBirdsDepartAnimation() {
+		addBirdsDepartAnimationWithBeginTime(0, fillMode: kCAFillModeBoth, removedOnCompletion: false, nil)
+	}
+
+	func addBirdsDepartAnimation(completion: ((Bool) -> Void)?) {
+		addBirdsDepartAnimationWithBeginTime(0, fillMode: kCAFillModeBoth, removedOnCompletion: false, completion)
+	}
+
+	func addBirdsDepartAnimation(#removedOnCompletion: Bool) {
+		addBirdsDepartAnimationWithBeginTime(0, fillMode: removedOnCompletion ? kCAFillModeRemoved : kCAFillModeBoth, removedOnCompletion: removedOnCompletion, nil)
+	}
+
+	func addBirdsDepartAnimation(#removedOnCompletion: Bool, completion: ((Bool) -> Void)?) {
+		addBirdsDepartAnimationWithBeginTime(0, fillMode: removedOnCompletion ? kCAFillModeRemoved : kCAFillModeBoth, removedOnCompletion: removedOnCompletion, completion)
+	}
+
+	func addBirdsDepartAnimationWithBeginTime(beginTime: CFTimeInterval, fillMode: String, removedOnCompletion: Bool, completion: ((Bool) -> Void)?) {
+		let overshootTiming = CAMediaTimingFunction(controlPoints: 0.00, 0.00, 0.58, 1.30)
+		let linearTiming = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+		let easeOutTiming = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+		if let complete = completion {
+			let representativeAnimation = CABasicAnimation(keyPath: "not.a.real.key")
+			representativeAnimation.duration = 0.500
+			representativeAnimation.delegate = self
+			self.layer.addAnimation(representativeAnimation, forKey: "BirdsDepart")
+			self.animationCompletions[layer.animationForKey("BirdsDepart")] = complete
+		}
+
+		let bird01OpacityAnimation = CAKeyframeAnimation(keyPath: "opacity")
+		bird01OpacityAnimation.duration = 0.500
+		bird01OpacityAnimation.values = [1.000 as Float, 0.000 as Float]
+		bird01OpacityAnimation.keyTimes = [0.000 as Float, 1.000 as Float]
+		bird01OpacityAnimation.timingFunctions = [easeOutTiming]
+		bird01OpacityAnimation.beginTime = beginTime
+		bird01OpacityAnimation.fillMode = fillMode
+		bird01OpacityAnimation.removedOnCompletion = removedOnCompletion
+		self.viewsByName["bird_01"]?.layer.addAnimation(bird01OpacityAnimation, forKey:"BirdsDepart_Opacity")
+
+		let bird01TranslationXAnimation = CAKeyframeAnimation(keyPath: "transform.translation.x")
+		bird01TranslationXAnimation.duration = 0.500
+		bird01TranslationXAnimation.values = [1214.969 as Float, 1034.969 as Float]
+		bird01TranslationXAnimation.keyTimes = [0.000 as Float, 1.000 as Float]
+		bird01TranslationXAnimation.timingFunctions = [easeOutTiming]
+		bird01TranslationXAnimation.beginTime = beginTime
+		bird01TranslationXAnimation.fillMode = fillMode
+		bird01TranslationXAnimation.removedOnCompletion = removedOnCompletion
+		self.viewsByName["bird_01"]?.layer.addAnimation(bird01TranslationXAnimation, forKey:"BirdsDepart_TranslationX")
+
+		let bird01TranslationYAnimation = CAKeyframeAnimation(keyPath: "transform.translation.y")
+		bird01TranslationYAnimation.duration = 0.500
+		bird01TranslationYAnimation.values = [930.719 as Float, 470.719 as Float]
+		bird01TranslationYAnimation.keyTimes = [0.000 as Float, 1.000 as Float]
+		bird01TranslationYAnimation.timingFunctions = [easeOutTiming]
+		bird01TranslationYAnimation.beginTime = beginTime
+		bird01TranslationYAnimation.fillMode = fillMode
+		bird01TranslationYAnimation.removedOnCompletion = removedOnCompletion
+		self.viewsByName["bird_01"]?.layer.addAnimation(bird01TranslationYAnimation, forKey:"BirdsDepart_TranslationY")
+
+		let bird00OpacityAnimation = CAKeyframeAnimation(keyPath: "opacity")
+		bird00OpacityAnimation.duration = 0.500
+		bird00OpacityAnimation.values = [1.000 as Float, 0.000 as Float]
+		bird00OpacityAnimation.keyTimes = [0.000 as Float, 1.000 as Float]
+		bird00OpacityAnimation.timingFunctions = [easeOutTiming]
+		bird00OpacityAnimation.beginTime = beginTime
+		bird00OpacityAnimation.fillMode = fillMode
+		bird00OpacityAnimation.removedOnCompletion = removedOnCompletion
+		self.viewsByName["bird_00"]?.layer.addAnimation(bird00OpacityAnimation, forKey:"BirdsDepart_Opacity")
+
+		let bird00TranslationXAnimation = CAKeyframeAnimation(keyPath: "transform.translation.x")
+		bird00TranslationXAnimation.duration = 0.500
+		bird00TranslationXAnimation.values = [1142.477 as Float, 1322.477 as Float]
+		bird00TranslationXAnimation.keyTimes = [0.000 as Float, 1.000 as Float]
+		bird00TranslationXAnimation.timingFunctions = [easeOutTiming]
+		bird00TranslationXAnimation.beginTime = beginTime
+		bird00TranslationXAnimation.fillMode = fillMode
+		bird00TranslationXAnimation.removedOnCompletion = removedOnCompletion
+		self.viewsByName["bird_00"]?.layer.addAnimation(bird00TranslationXAnimation, forKey:"BirdsDepart_TranslationX")
+
+		let bird00TranslationYAnimation = CAKeyframeAnimation(keyPath: "transform.translation.y")
+		bird00TranslationYAnimation.duration = 0.500
+		bird00TranslationYAnimation.values = [463.398 as Float, 33.398 as Float]
+		bird00TranslationYAnimation.keyTimes = [0.000 as Float, 1.000 as Float]
+		bird00TranslationYAnimation.timingFunctions = [easeOutTiming]
+		bird00TranslationYAnimation.beginTime = beginTime
+		bird00TranslationYAnimation.fillMode = fillMode
+		bird00TranslationYAnimation.removedOnCompletion = removedOnCompletion
+		self.viewsByName["bird_00"]?.layer.addAnimation(bird00TranslationYAnimation, forKey:"BirdsDepart_TranslationY")
+
+		let bird08OpacityAnimation = CAKeyframeAnimation(keyPath: "opacity")
+		bird08OpacityAnimation.duration = 0.500
+		bird08OpacityAnimation.values = [1.000 as Float, 0.000 as Float]
+		bird08OpacityAnimation.keyTimes = [0.000 as Float, 1.000 as Float]
+		bird08OpacityAnimation.timingFunctions = [easeOutTiming]
+		bird08OpacityAnimation.beginTime = beginTime
+		bird08OpacityAnimation.fillMode = fillMode
+		bird08OpacityAnimation.removedOnCompletion = removedOnCompletion
+		self.viewsByName["bird_08"]?.layer.addAnimation(bird08OpacityAnimation, forKey:"BirdsDepart_Opacity")
+
+		let bird08TranslationXAnimation = CAKeyframeAnimation(keyPath: "transform.translation.x")
+		bird08TranslationXAnimation.duration = 0.500
+		bird08TranslationXAnimation.values = [-1145.757 as Float, -958.589 as Float]
+		bird08TranslationXAnimation.keyTimes = [0.000 as Float, 1.000 as Float]
+		bird08TranslationXAnimation.timingFunctions = [easeOutTiming]
+		bird08TranslationXAnimation.beginTime = beginTime
+		bird08TranslationXAnimation.fillMode = fillMode
+		bird08TranslationXAnimation.removedOnCompletion = removedOnCompletion
+		self.viewsByName["bird_08"]?.layer.addAnimation(bird08TranslationXAnimation, forKey:"BirdsDepart_TranslationX")
+
+		let bird08TranslationYAnimation = CAKeyframeAnimation(keyPath: "transform.translation.y")
+		bird08TranslationYAnimation.duration = 0.500
+		bird08TranslationYAnimation.values = [671.937 as Float, 311.711 as Float]
+		bird08TranslationYAnimation.keyTimes = [0.000 as Float, 1.000 as Float]
+		bird08TranslationYAnimation.timingFunctions = [easeOutTiming]
+		bird08TranslationYAnimation.beginTime = beginTime
+		bird08TranslationYAnimation.fillMode = fillMode
+		bird08TranslationYAnimation.removedOnCompletion = removedOnCompletion
+		self.viewsByName["bird_08"]?.layer.addAnimation(bird08TranslationYAnimation, forKey:"BirdsDepart_TranslationY")
+
+		let bird06OpacityAnimation = CAKeyframeAnimation(keyPath: "opacity")
+		bird06OpacityAnimation.duration = 0.500
+		bird06OpacityAnimation.values = [1.000 as Float, 0.000 as Float]
+		bird06OpacityAnimation.keyTimes = [0.000 as Float, 1.000 as Float]
+		bird06OpacityAnimation.timingFunctions = [easeOutTiming]
+		bird06OpacityAnimation.beginTime = beginTime
+		bird06OpacityAnimation.fillMode = fillMode
+		bird06OpacityAnimation.removedOnCompletion = removedOnCompletion
+		self.viewsByName["bird_06"]?.layer.addAnimation(bird06OpacityAnimation, forKey:"BirdsDepart_Opacity")
+
+		let bird06TranslationXAnimation = CAKeyframeAnimation(keyPath: "transform.translation.x")
+		bird06TranslationXAnimation.duration = 0.500
+		bird06TranslationXAnimation.values = [1068.148 as Float, 778.148 as Float]
+		bird06TranslationXAnimation.keyTimes = [0.000 as Float, 1.000 as Float]
+		bird06TranslationXAnimation.timingFunctions = [easeOutTiming]
+		bird06TranslationXAnimation.beginTime = beginTime
+		bird06TranslationXAnimation.fillMode = fillMode
+		bird06TranslationXAnimation.removedOnCompletion = removedOnCompletion
+		self.viewsByName["bird_06"]?.layer.addAnimation(bird06TranslationXAnimation, forKey:"BirdsDepart_TranslationX")
+
+		let bird06TranslationYAnimation = CAKeyframeAnimation(keyPath: "transform.translation.y")
+		bird06TranslationYAnimation.duration = 0.500
+		bird06TranslationYAnimation.values = [338.188 as Float, 16.188 as Float]
+		bird06TranslationYAnimation.keyTimes = [0.000 as Float, 1.000 as Float]
+		bird06TranslationYAnimation.timingFunctions = [easeOutTiming]
+		bird06TranslationYAnimation.beginTime = beginTime
+		bird06TranslationYAnimation.fillMode = fillMode
+		bird06TranslationYAnimation.removedOnCompletion = removedOnCompletion
+		self.viewsByName["bird_06"]?.layer.addAnimation(bird06TranslationYAnimation, forKey:"BirdsDepart_TranslationY")
+
+		let branch01RotationAnimation = CAKeyframeAnimation(keyPath: "transform.rotation.z")
+		branch01RotationAnimation.duration = 0.500
+		branch01RotationAnimation.values = [0.000 as Float, 0.244 as Float]
+		branch01RotationAnimation.keyTimes = [0.000 as Float, 1.000 as Float]
+		branch01RotationAnimation.timingFunctions = [overshootTiming]
+		branch01RotationAnimation.beginTime = beginTime
+		branch01RotationAnimation.fillMode = fillMode
+		branch01RotationAnimation.removedOnCompletion = removedOnCompletion
+		self.viewsByName["branch01"]?.layer.addAnimation(branch01RotationAnimation, forKey:"BirdsDepart_Rotation")
+
+		let branch01OpacityAnimation = CAKeyframeAnimation(keyPath: "opacity")
+		branch01OpacityAnimation.duration = 0.500
+		branch01OpacityAnimation.values = [1.000 as Float, 1.000 as Float]
+		branch01OpacityAnimation.keyTimes = [0.000 as Float, 1.000 as Float]
+		branch01OpacityAnimation.timingFunctions = [linearTiming]
+		branch01OpacityAnimation.beginTime = beginTime
+		branch01OpacityAnimation.fillMode = fillMode
+		branch01OpacityAnimation.removedOnCompletion = removedOnCompletion
+		self.viewsByName["branch01"]?.layer.addAnimation(branch01OpacityAnimation, forKey:"BirdsDepart_Opacity")
+	}
+
+	func removeBirdsDepartAnimation() {
+		self.layer.removeAnimationForKey("BirdsDepart")
+		self.viewsByName["bird_01"]?.layer.removeAnimationForKey("BirdsDepart_Opacity")
+		self.viewsByName["bird_01"]?.layer.removeAnimationForKey("BirdsDepart_TranslationX")
+		self.viewsByName["bird_01"]?.layer.removeAnimationForKey("BirdsDepart_TranslationY")
+		self.viewsByName["bird_00"]?.layer.removeAnimationForKey("BirdsDepart_Opacity")
+		self.viewsByName["bird_00"]?.layer.removeAnimationForKey("BirdsDepart_TranslationX")
+		self.viewsByName["bird_00"]?.layer.removeAnimationForKey("BirdsDepart_TranslationY")
+		self.viewsByName["bird_08"]?.layer.removeAnimationForKey("BirdsDepart_Opacity")
+		self.viewsByName["bird_08"]?.layer.removeAnimationForKey("BirdsDepart_TranslationX")
+		self.viewsByName["bird_08"]?.layer.removeAnimationForKey("BirdsDepart_TranslationY")
+		self.viewsByName["bird_06"]?.layer.removeAnimationForKey("BirdsDepart_Opacity")
+		self.viewsByName["bird_06"]?.layer.removeAnimationForKey("BirdsDepart_TranslationX")
+		self.viewsByName["bird_06"]?.layer.removeAnimationForKey("BirdsDepart_TranslationY")
+		self.viewsByName["branch01"]?.layer.removeAnimationForKey("BirdsDepart_Rotation")
+		self.viewsByName["branch01"]?.layer.removeAnimationForKey("BirdsDepart_Opacity")
 	}
 
 	override func animationDidStop(anim: CAAnimation!, finished flag: Bool) {
@@ -279,5 +525,6 @@ class PeckHelpShortView : UIView {
 			subview.layer.removeAllAnimations()
 		}
 		self.layer.removeAnimationForKey("BirdsLand")
+		self.layer.removeAnimationForKey("BirdsDepart")
 	}
 }

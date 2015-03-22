@@ -19,6 +19,7 @@ class TrashCanView : UIView {
 	override init() {
 		super.init(frame: CGRect(x: 0, y: 0, width: 106, height: 141))
 		self.setupHierarchy()
+
 	}
 
 	override init(frame: CGRect) {

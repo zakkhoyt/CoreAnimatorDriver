@@ -11,6 +11,8 @@ import UIKit
 class DemonViewController: UIViewController {
 
     @IBOutlet weak var demonView: DemonView!
+    var player = AudioClipPlayer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,6 +26,9 @@ class DemonViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         demonView.addAmbientAnimation()
+//        let player = AudioClipPlayer()
+        player.playAudioFile("heartbeat")
+
     }
 
     /*
@@ -37,6 +42,23 @@ class DemonViewController: UIViewController {
     */
 
     @IBAction func biteButtonAction(sender: AnyObject) {
-        demonView.addAmbientAnimation()
+        demonView.removeAmbientAnimation()
+        demonView.addBiteAnimation { (Bool completed) -> Void in
+            if completed {
+                self.demonView.addAmbientAnimation()
+            }
+//            let player = AudioClipPlayer()
+            self.player.playAudioFile("growl_bite")
+        }
+    }
+    @IBAction func walkButtonAction(sender: AnyObject) {
+//        let player = AudioClipPlayer()
+        player.playAudioFile("bite_apple")
+        
+    }
+    @IBAction func jumpButtonAction(sender: AnyObject) {
+        
+//        let player = AudioClipPlayer()
+        player.playAudioFile("chewing")
     }
 }

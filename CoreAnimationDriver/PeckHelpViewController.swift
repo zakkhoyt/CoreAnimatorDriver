@@ -10,6 +10,9 @@ import UIKit
 
 class PeckHelpViewController: UIViewController {
 
+    @IBOutlet weak var peckHelpView: PeckHelpShortView!
+    var player = AudioClipPlayer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,4 +35,13 @@ class PeckHelpViewController: UIViewController {
     }
     */
 
+    
+    @IBAction func openButtonAction(sender: AnyObject) {
+        peckHelpView.addBirdsLandAnimation()
+        self.player.playAudioFile("robin")
+    }
+    
+    @IBAction func closeButtonAction(sender: AnyObject) {
+        peckHelpView.addBirdsDepartAnimation()
+    }
 }

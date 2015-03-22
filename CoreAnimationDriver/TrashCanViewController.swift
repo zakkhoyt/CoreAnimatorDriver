@@ -8,8 +8,10 @@
 
 import UIKit
 
-class TrashCanViewController: UIViewController {
 
+class TrashCanViewController: UIViewController {
+    var player = AudioClipPlayer()
+    @IBOutlet weak var trashCanView: TrashCanView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +24,7 @@ class TrashCanViewController: UIViewController {
     }
     
 
+    
     /*
     // MARK: - Navigation
 
@@ -32,4 +35,15 @@ class TrashCanViewController: UIViewController {
     }
     */
 
+    @IBAction func openButtonAction(sender: AnyObject) {
+        trashCanView.addOpenLidAnimation()
+        self.player.playAudioFile("robin")
+    }
+    
+    @IBAction func closeButtonAction(sender: AnyObject) {
+        trashCanView.removeCloseLidAnimation()  
+    }
+    
+    
+    
 }
