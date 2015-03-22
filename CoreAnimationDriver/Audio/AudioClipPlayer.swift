@@ -16,7 +16,7 @@
 import UIKit
 import AVFoundation
 
-class AudioClipPlayer: NSObject, AVAudioPlayerDelegate {
+class AudioClipPlayer: NSObject {
     var theAudio: AVAudioPlayer! = nil
 
     class func playFile(file:String) -> AudioClipPlayer{
@@ -39,20 +39,6 @@ class AudioClipPlayer: NSObject, AVAudioPlayerDelegate {
         theAudio.play()
     }
     
-    func audioPlayerDidFinishPlaying(player: AVAudioPlayer!, successfully flag: Bool) {
-        println("Finished playing audio file")
-        theAudio = nil;
-    }
-    
-    func audioPlayerDecodeErrorDidOccur(player: AVAudioPlayer!, error: NSError!) {
-        println("A decode error occured while playing audio file");
-    }
-
-}
-
-
-//extension AudioClipPlayer: AVAudioPlayerDelegate{
-//    
 //    func audioPlayerDidFinishPlaying(player: AVAudioPlayer!, successfully flag: Bool) {
 //        println("Finished playing audio file")
 //        theAudio = nil;
@@ -61,5 +47,19 @@ class AudioClipPlayer: NSObject, AVAudioPlayerDelegate {
 //    func audioPlayerDecodeErrorDidOccur(player: AVAudioPlayer!, error: NSError!) {
 //        println("A decode error occured while playing audio file");
 //    }
-//   
-//}
+
+}
+
+
+extension AudioClipPlayer: AVAudioPlayerDelegate{
+    
+    func audioPlayerDidFinishPlaying(player: AVAudioPlayer!, successfully flag: Bool) {
+        println("Finished playing audio file")
+        theAudio = nil;
+    }
+    
+    func audioPlayerDecodeErrorDidOccur(player: AVAudioPlayer!, error: NSError!) {
+        println("A decode error occured while playing audio file");
+    }
+   
+}
